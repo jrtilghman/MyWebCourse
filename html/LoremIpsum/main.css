@@ -1,0 +1,86 @@
+/* @import url('halloween.css'); */
+body {
+    color : red;
+    font-size: 100%;
+    background-color:lightgrey;
+
+}
+h2 {
+    color:green;
+    font-style: italic;
+    font-size: 1.2em;
+    border-bottom: 2px solid orange;
+    border-radius: 10px;
+    
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#258dc8+1,258dc8+83&0.23+19,1+98 */
+    background: -moz-linear-gradient(top, rgba(37,141,200,0.23) 1%, rgba(37,141,200,0.23) 19%, rgba(37,141,200,0.85) 83%, rgba(37,141,200,1) 98%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(37,141,200,0.23) 1%,rgba(37,141,200,0.23) 19%,rgba(37,141,200,0.85) 83%,rgba(37,141,200,1) 98%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(37,141,200,0.23) 1%,rgba(37,141,200,0.23) 19%,rgba(37,141,200,0.85) 83%,rgba(37,141,200,1) 98%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b258dc8', endColorstr='#258dc8',GradientType=0 ); /* IE6-9 */
+}
+
+h1 {
+    color: rgb(248, 163, 4);
+    font-family:   Calibri,'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 3em;
+    padding: 10px;
+}
+
+footer{
+    font-weight: bold;
+    padding: 5px;
+}
+
+li{
+    font-variant: small-caps;
+    padding: 3px;
+}
+
+header h2, #id1 h2 span#thirdletter  {
+    color:black
+}
+p{
+    color:blue;
+    font-size: 18px;
+    padding: 8px;
+}
+
+/* nav a:link {
+   color:white;
+   background-color: red
+} 
+
+nav a:hover {
+    color:red;
+    background-color: white
+}*/
+
+header {
+   text-align: center
+}
+
+nav ul li{
+    list-style: none;
+    display: inline;
+
+}
+
+nav ul li a{
+    text-decoration: none
+
+}
+
+p.two{
+    font: bold 15px Arial, sans-serif;
+    color:black;
+}
+
+/*article {
+    border: 2px solid orange;
+    border-bottom: 2px solid orange; 
+     border-left: 2px solid orange; 
+    border-right: 2px solid orange;  
+    border-radius: 10px;
+}*/
+            
