@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+            
+            function init(){
+                var canvas = document.getElementById('canvas');
+                var ctx = canvas.getContext('2d');
+                
+                ctx.beginPath();
+               // ctx2.beginPath();
+                
+                // ctx.moveTo(75,50);
+                // ctx.lineTo(100,75);
+                // ctx.lineTo(100,25);
+                // ctx.fillStyle='Gold';
+                // ctx.fill();
+
+                // ctx.moveTo(400,400);
+                // ctx.arc(400,400,200,0,2*Math.PI,false);
+                // ctx.fillStyle='Black';
+                // ctx.fill();
+
+                //Shirt
+                // ctx.moveTo(400,600);
+                // ctx.arc(400,600,200,0,2*Math.PI,false); 
+                // ctx.fillStyle='Black';
+                // ctx.fill();
+                
+                //left ear/hair
+                ctx.moveTo(200,200);
+                ctx.arc(200,200,100,0,2*Math.PI,false);
+                ctx.fillStyle='Black';
+                ctx.fill();
+
+                //Right ear/hair
+                ctx.moveTo(600,200);
+                ctx.arc(600,200,100,0,2*Math.PI,false);
+                ctx.fillStyle='Black';
+                ctx.fill();
+                ctx.closePath();
+                
+                //face
+                ctx.beginPath();
+                ctx.moveTo(400,100);
+                ctx.arc(400,400,200,0,2*Math.PI,false);
+                ctx.fillStyle='Tan';
+                ctx.fill();
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.moveTo(400,350);
+                ctx.arc(400,350,192,Math.PI,0,false);
+                ctx.fillStyle='black';
+                ctx.fill();
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.moveTo(400,360);
+                ctx.arc(400,362,191,Math.PI,0,false);
+                ctx.fillStyle='tan';
+                ctx.fill();
+                ctx.closePath();
+
+                //EYES
+                ctx.beginPath();
+                ctx.moveTo(375,330);
+                ctx.arc(327,330,65,2*Math.PI,0,false);
+                ctx.fillStyle='white';
+                ctx.fill();
+
+               // ctx.beginPath();
+                ctx.moveTo(425,330);
+                ctx.arc(467,330,65,2*Math.PI,0,false);
+                ctx.fillStyle='white';
+                ctx.fill();
+                ctx.closePath();
+
+                let characterEyeColor ='saddlebrown';
+                let blankOutEyeColor = 'white';
+                //eye color with eyes in middle  
+                function eyesMiddle(eyecolor, size){            
+                    ctx.beginPath();
+                    ctx.moveTo(405,330);
+                    ctx.arc(327,330,size,2*Math.PI,0,false);
+                    ctx.fillStyle=eyecolor;
+                    ctx.fill();
+
+                    ctx.moveTo(455,330);
+                    ctx.arc(467,330,size,2*Math.PI,0,false);
+                    ctx.fillStyle=eyecolor;
+                    ctx.fill();
+                    ctx.closePath();
+                }   
+
+                function eyesRight(eyecolor, size){  
+                    ctx.beginPath();
+                    ctx.moveTo(405,330);
+                    ctx.arc(347,330,size,2*Math.PI,0,false);
+                    ctx.fillStyle=eyecolor;
+                    ctx.fill();
+
+                    ctx.moveTo(455,330);
+                    ctx.arc(487,330,size,2*Math.PI,0,false);
+                    ctx.fillStyle=eyecolor;
+                    ctx.fill();
+                    ctx.closePath();
+ 
+                }
+                function eyesLeft(eyecolor, size){
+                    ctx.beginPath();
+                    ctx.moveTo(405,330);
+                    ctx.arc(307,330,size,2*Math.PI,0,false);
+                    ctx.fillStyle=eyecolor;
+                    ctx.fill();
+
+                    ctx.moveTo(455,330);
+                    ctx.arc(447,330,size,2*Math.PI,0,false);
+                    ctx.fillStyle=eyecolor;
+                    ctx.fill();
+                    ctx.closePath();
+                         
+                }
+                let direction ='left';
+                
+                eyesMiddle(characterEyeColor,15);
+                setInterval(function(){
+                    eyesMiddle(blankOutEyeColor,20);                        
+                    if(direction === 'left'){
+                        eyesRight(blankOutEyeColor,20);
+                        eyesLeft(characterEyeColor, 15);                    
+                        direction = 'right';
+                    }else{
+                        eyesLeft(blankOutEyeColor,20);   
+                        eyesRight(characterEyeColor,15);   
+                        direction = 'left';
+                    }
+                 },1000);
+
+                // ctx.beginPath();
+                // ctx.moveTo(405,330);
+                // ctx.arc(327,330,15,2*Math.PI,0,false);
+                // ctx.fillStyle='saddlebrown';
+                // ctx.fill();
+
+                // ctx.moveTo(455,330);
+                // ctx.arc(467,330,15,2*Math.PI,0,false);
+                // ctx.fillStyle='saddlebrown';
+                // ctx.fill();
+                // ctx.closePath();
+
+
+                 
+
+                //angled hair
+                // ctx.beginPath();
+                // ctx.moveTo(400,250);
+                // ctx.arc(400,400,200,0,Math.PI,true);
+                // ctx.fillStyle='Black';
+                // ctx.fill();
+                // ctx.closePath();
+            }; 
+
+    </script>
+</head>
+<body onLoad = "init()">
+        <canvas id="canvas" width="1000" height="700"></canvas>
+</body>
+</html>
